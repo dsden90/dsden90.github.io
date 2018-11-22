@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<script type="text/javascript">
+			// setup
+			var game = {
+				status: {
+					player: 1,
+					allowedCells: 'line',
+					cellsIndex: 2,
+					score1: 0,
+					score2: 0
+				},
+				setup: {
+					scoreCalc: 'comp' // possible values : 'comp', 'player'
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="score active" id="score1">JOUEUR 1 : <span id="score1">0</span><div class="scoreIncreaser">Tu marques <span class="cellValue"></span> points.<br />Écris ton nouveau score : <br /><input type="text" class="scoreIncreaser" /><button class="scoreIncreaser">valider</div></div>
+			<div id="board" class="toP1">
+				<div class="cell" data-line="0" data-row="0"></div>
+				<div class="cell" data-line="0" data-row="1"></div>
+				<div class="cell" data-line="0" data-row="2"></div>
+				<div class="cell" data-line="0" data-row="3"></div>
+				<div class="cell" data-line="0" data-row="4"></div><div style="clear: both"></div>
+				<div class="cell" data-line="1" data-row="0"></div>
+				<div class="cell" data-line="1" data-row="1"></div>
+				<div class="cell" data-line="1" data-row="2"></div>
+				<div class="cell" data-line="1" data-row="3"></div>
+				<div class="cell" data-line="1" data-row="4"></div><div style="clear: both"></div>
+				<div class="cell playable" data-line="2" data-row="0"></div>
+				<div class="cell playable" data-line="2" data-row="1"></div>
+				<div class="cell playable" data-line="2" data-row="2"></div>
+				<div class="cell playable" data-line="2" data-row="3"></div>
+				<div class="cell playable" data-line="2" data-row="4"></div><div style="clear: both"></div>
+				<div class="cell" data-line="3" data-row="0"></div>
+				<div class="cell" data-line="3" data-row="1"></div>
+				<div class="cell" data-line="3" data-row="2"></div>
+				<div class="cell" data-line="3" data-row="3"></div>
+				<div class="cell" data-line="3" data-row="4"></div><div style="clear: both"></div>
+				<div class="cell" data-line="4" data-row="0"></div>
+				<div class="cell" data-line="4" data-row="1"></div>
+				<div class="cell" data-line="4" data-row="2"></div>
+				<div class="cell" data-line="4" data-row="3"></div>
+				<div class="cell" data-line="4" data-row="4"></div><div style="clear: both"></div>
+				<div style="clear: both"></div>
+			</div>
+			<div class="score" id="score2">JOUEUR 2 : <span id="score2">0</span><div class="scoreIncreaser">Tu marques <span class="cellValue"></span> points.<br />Écris ton nouveau score : <br /><input type="text" class="scoreIncreaser" /><button class="scoreIncreaser">valider</div></div>
+		</div>
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+	font-family: Arial;
+	font-size: 1em;
+	background-color: #0f1b69;
+	box-shadow: inset 0 0 3em rgba(0, 0, 0, 1);
+	margin: 0;
+	padding: 0;
+}
+.container {
+	text-align: center;
+
+	display: flex;              /* establish flex container */
+	flex-direction: column;     /* stack flex items vertically */
+	justify-content: center;    /* center items vertically, in this case */
+	align-items: center;        /* center items horizontally, in this case */
+	height: 100%;
+}
+#board {
+	display: inline-block;
+	border: 1px solid #FFF;
+	box-shadow: 0.4em 0.4em 0.4em rgba(0,0,0,0.5);
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+	#board.toP1 {
+		transform: rotate(90deg);
+	}
+	#board.toP2 {
+		transform: rotate(-90deg);
+	}
+.cell {
+	float: left;
+	border: 1px solid #FFF;
+	width: 3em;
+	height: 2em;
+	text-align: center;
+	font-size: 2em;
+	padding-top: 0.7em;
+	cursor: pointer;
+	background-color: #FFEBC9;
+	box-shadow: inset 0 0 0.4em rgba(0,0,0,0.2);
+}
+	.cell.playable {
+		background-color: #FFC77F;
+	}
+	.cell.disabled {
+		/*color: #FFC77F;*/
+		color: transparent;
+	}
+.score {
+	display: inline-block;
+	position: absolute;
+	padding: 1em;
+	margin: 0;
+
+	font-size: 2em;
+	font-weight: bold;
+	
+	background-color: #130048;
+	color: #FFF;
+
+	border: 3px solid #99C;
+	border-radius: 1em;
+	box-shadow: inset 0 0 0.5em #003;
+
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+	.score.active {
+		text-shadow: 0px 0px 0.3em rgba(255,255,255,0.5);
+	}
+	#score1 {
+		left: 0;
+		transform: scale(0.5, 0.5) rotate(90deg);
+	}
+	#score1.active {
+		transform: scale(1, 1) rotate(90deg);
+	}
+	#score2 {
+		right: 0;
+		transform: scale(0.5, 0.5) rotate(-90deg);
+	}
+	#score2.active {
+		transform: scale(1, 1) rotate(-90deg);
+	}
+div.scoreIncreaser {
+	display: none;
+	font-size: 0.4em;
+	font-weight: normal;
+}
+input.scoreIncreaser {
+	width: 4em;
+	background-color: #FFF;
+}
+input.wrong {
+	background-color: #FF6B00;
+}
+button.scoreIncreaser {
+	border: 1px solid #99C;
+	margin: 1em 0 0 1em;
+	background-color: #FFF;
+	border-radius: 0.5em;
+	padding: 0 0.2em 0.2em 0.5em;
+}
+span.cellValue {
+	font-weight: bold;
+}
