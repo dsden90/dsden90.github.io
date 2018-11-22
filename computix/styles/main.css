@@ -33,7 +33,7 @@ body {
 .cell {
 	float: left;
 	border: 1px solid #FFF;
-	width: 3em;
+	width: 2.5em;
 	height: 2em;
 	text-align: center;
 	font-size: 2em;
